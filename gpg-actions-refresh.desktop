@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Refresh keys
+Tooltip=Refresh list of keys for gnupg-actions
+Icon=gnupg
+Profiles=on_file;
+
+[X-Action-Profile on_file]
+MimeTypes=all/allfiles;
+Exec=gpg-actions

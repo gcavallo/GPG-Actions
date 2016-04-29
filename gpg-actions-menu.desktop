@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Menu
+Name=Encrypt for...
+Tooltip=Encrypt and sign file for the specified user
+Icon=gnupg
+ItemsList=gpg-actions-refresh;
