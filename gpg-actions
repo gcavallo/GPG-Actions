@@ -1,8 +1,8 @@
 #!/usr/bin/env sh
 
-keys=$(gpg --list-keys | grep uid | cut -d "<" -f2 | cut -d ">" -f1)
+keys=$(gpg --list-keys --with-colons | grep "uid:[mfu]" | cut -d "<" -f2 | cut -d ">" -f1)
 adir="$HOME/.local/share/file-manager/actions"
-items="ItemsList="
+items=""
 
 # Delete uid entries
 rm "$adir/uid_"*".desktop"
@@ -30,5 +30,5 @@ cat > "$adir/gpg-actions-menu.desktop" <<- EOF
 	Name=Encrypt for...
 	Tooltip=Encrypt and sign file for the specified user
 	Icon=gnupg
-	${items}SEPARATOR;gpg-actions-refresh;
+	ItemsList=${items}
 EOF
